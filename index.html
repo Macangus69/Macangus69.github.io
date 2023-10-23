@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="anonymous">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <title>Find a Pred</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">You've Got A Match!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Now you can move onto the checkout page or select your reformation package!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Checkout</button>
+          <button type="button" class="btn btn-primary" id="packages">Reformation Packages</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Checkout</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-white">Find a Pred</a></li>
+            <li><a href="reformationPlan.html" class="text-white">Reformation Options</a></li>
+            <li><a href="#" class="text-white">Checkout and Pay</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <span class="material-symbols-outlined">menu_book</span>
+        <strong>Matches</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">You've Got Matches!</h1>
+        <p class="lead text-muted">You've matched with some preds on the site! You can now go and Find a Pred℠ and have some fun. Make sure that you choose a reformation option because permenant digestion is the default.</p>
+        <p>
+            <button type="button" class="btn btn-primary" id="packages">Reformation Packages</button>
+          <a href="#" class="btn btn-secondary my-2">Go to Checkout</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Pregnant_woman.jpg/640px-Pregnant_woman.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Alana Tennyson and I'm 25. I'm a pred from Ocala Florida and I work as a teacher at Ocala Culinary College. I can't wait to meet, I mean meat, I mean eat you ;)</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Alana Tennyson"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pregnant_%2867023163%29.jpeg/640px-Pregnant_%2867023163%29.jpeg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Maddie Orlandio and I'm 40. I'm a pred from Rolla Missouri and I work as a speech therapist at Speetutics Incorperated. I hope you don't stutter. I might just have to do some, negative reinforcement training.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Maddie Orlandio"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Pregnant_asian_woman.jpg/640px-Pregnant_asian_woman.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Sailor Snow and I'm 41. I'm a pred from Pāhoa Hawaii and I work as a chef at Pele's Kitchen. I hope you taste better than the ingredients they import into the resturant.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Sailor Snow"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Vivi_Berens_1_pregnant_1984.jpg/640px-Vivi_Berens_1_pregnant_1984.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Lilly Byrd and I'm 47. I'm a pred from Colorado Springs and I work as a manager at The Broadmoor. I basically own this hotel. Maybe we could find a room for us. It may be weird if they see us go in and only me come out though.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Lilly Byrd"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/A_very_pregnant_Pilar_Scratch.jpg/640px-A_very_pregnant_Pilar_Scratch.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Xena McKenzie and I'm 28. I'm a pred from Long Beach California and I work as a cop at LAPD. If you decide to try anuthing funny, I can detain you before I put you somewhere warm and wet. If you squirm while I'm on the job, you may get digested faster that you want.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Xena McKenzie"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Pregnant_7_months.jpg/640px-Pregnant_7_months.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Porsha Cordova and I'm 27. I'm a pred from Vancouver Canada and I work as a Model at my own buisiness. I bet you'll make a great prop for my maternal line!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Porsha Cordova"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Nude_pregnant_girl.jpg/640px-Nude_pregnant_girl.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Adela Rico and I'm 26. I'm a pred from Jacksonville Florida and I work as a bartender at Omni Island Resort. You're gonna help me get all the tips at the bar. Afterwords maybe we can find a room in this resort if you choose a reform option.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Adela Rico"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Sitting_pregnant_woman_in_red.jpg/640px-Sitting_pregnant_woman_in_red.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Gia Eastman and I'm 34. I'm a pred from Savannah Georgia and I work as a horse-drawn carriage driver at The Olde Pink House. If you choose me, its gonna be a bumpy ride.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Gia Eastman"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pregnant_woman_%284977966488%29.jpg/640px-Pregnant_woman_%284977966488%29.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Petra Němcová and I'm 30. I'm a pred from Kutna Hora in the Czech Republic and I work as a pharmacist at Lékárna nad Knížecí. I'm going to have to stuff you down my throat. It's not my choice, doctors orders ;)</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Petra Němcová"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pregnant_woman_%281%29.jpg/640px-Pregnant_woman_%281%29.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Julie Barnes and I'm 25. I'm a pred from Tulsa Okalahoma and I work as a treasurer at town hall. I like to count the cash in this town but I want to add you to the count of people on my ass.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Julie Barnes"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Pregnant_woman_with_nude_abdomen_and_tattoo_%2827958358053%29.jpg/640px-Pregnant_woman_with_nude_abdomen_and_tattoo_%2827958358053%29.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Haley Katz and I'm 23. I'm a pred from Miramar Florida and I work as a tattoo artist at 1 Girl Tattoo Parlor. Before I eat you you can get a tattoo free of charge. If you choose permanant digestion, I'll tattoo the tattoo you got on me!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Haley Katz"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Transform_%2851369924417%29.jpg/640px-Transform_%2851369924417%29.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Lumina Fritz and I'm 24. I'm a pred from Orlando Florida and I work as a programmer at Sexy Software Solutions. I'll fork you and commit you to my belly. Then I'll set your timestamp to null if you let me ;)</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Lumina Fritz"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pregnant_belly_by_Samantha_Lynn_-_December_2022.jpg/640px-Pregnant_belly_by_Samantha_Lynn_-_December_2022.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Samantha Lynn and I'm 22. I'm a pred from Southampton New York and I work as a doctor at FloTech Sports Medicine. I hope you're fit because this belly metabolizes fat faster than the average NFL player.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Samantha Lynn"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://p0.pikist.com/photos/83/542/pregnant-mother-pregnancy-pregnant-woman-big-belly-woman-gestation-mom-maternity-test.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Morgana Bear and I'm 32. I'm a pred from Branson Missouri and I work as a conductor at Branson Scenic Railway. If you can survive the train ride around town, you may hear and feel me moaning on my break.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Morgana Bear"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nude_Pregnant_Bodypainting_3.jpg/640px-Nude_Pregnant_Bodypainting_3.jpg">
+                    <div class="card-body">
+                        <p class="card-text">Hi, my name is Cassandra Silva and I'm 21. I'm a pred from Las Vegas Nevada and I work as a body paint model at sexy paint. You can help me model in Vegas after we gambel a bit. Maybe we can bet on how long you can last as a prop for me modeling!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="Cassandra Silva"data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">You better choose before someone grabs you and eats you right off of your computer!</p>
+  </div>
+</footer>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
