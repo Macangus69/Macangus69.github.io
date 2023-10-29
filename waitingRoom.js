@@ -1,5 +1,5 @@
 var timeTicsRemaining = 24;
-var timeTicLength = [1500, 3000];
+var timeTicLength = [5000,7000];
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
