@@ -37,16 +37,3 @@ document.getElementById("packages").addEventListener("click", function(){
     window.location.href = "reformationPlan.html";
   }
 })
-
-
-fetch('dataset.json')
-    .then((response) => response.json())
-    .then((json) => {
-      cardStack = document.getElementById("cardStack");
-      for (pred in json['Preds']) {
-        console.log(json['Preds'][pred]);
-        if (Object.keys(json['Preds'][pred]).includes('Index Text')) {
-          cardStack.innerHTML = cardStack.innerHTML + "<div class=\"col\"><div class=\"card shadow-sm\"><img src=\" " + json['Preds'][pred]["Photo Link"] + " \"><div class=\"card-body\"><p class=\"card-text\">" + json['Preds'][pred]['Index Text'] +"</p><div class=\"d-flex justify-content-between align-items-center\"><div class=\"btn-group\"><button type=\"button\" class=\"btn btn-sm btn-outline-secondary\" id=\"L\'Kenna Zumini\" data-bs-toggle=\"modal\" data-bs-target=\"#staticBackdrop\">Contact!</button></div></div></div></div></div>";
-        }
-      }
-    });
