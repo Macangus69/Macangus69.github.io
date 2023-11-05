@@ -47,6 +47,8 @@ fetch('dataset.json')
         console.log(json['Preds'][pred]);
         if (Object.keys(json['Preds'][pred]).includes('Index Text')) {
           cardStack.innerHTML = cardStack.innerHTML + "<div class=\"col\"><div class=\"card shadow-sm\"><img src=\" " + json['Preds'][pred]["Photo Link"] + " \"><div class=\"card-body\"><p class=\"card-text\">" + json['Preds'][pred]['Index Text'] +"</p><div class=\"d-flex justify-content-between align-items-center\"><div class=\"btn-group\"><button type=\"button\" class=\"btn btn-sm btn-outline-secondary\" id=\"L\'Kenna Zumini\" data-bs-toggle=\"modal\" data-bs-target=\"#staticBackdrop\">Contact!</button></div></div></div></div></div>";
+        } else {
+          cardStack.innerHTML = cardStack.innerHTML + "<div class='col'><div class='card shadow-sm'><img src='" + json['Preds'][pred]["Photo Link"] + "'><div class='card-body'><p class='card-text'>Hi, my name is " + json['Preds'][pred]["Name"] + " and I'm " + json['Preds'][pred]["Age"] + ". I'm a pred from " + json['Preds'][pred]["Lives"] + " and I work as a " + json['Preds'][pred]["Profession"] + " at " + json['Preds'][pred]["Place of Work"] + ". " + json['Preds'][pred]["Index Hook"] + ".</p><div class='d-flex justify-content-between align-items-center'><div class='btn-group'><button type='button' class='btn btn-sm btn-outline-secondary' id='" + json['Preds'][pred]["Name"] + "'data-bs-toggle='modal' data-bs-target='#staticBackdrop'>Contact!</button></div></div></div></div></div>";
         }
       }
     });
