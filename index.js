@@ -3,8 +3,8 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-function getCookie(cname) {
+  }
+  function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
@@ -18,28 +18,9 @@ function getCookie(cname) {
     }
   }
   return "";
-}
-var buttons = document.getElementsByClassName("btn-outline-secondary");
-var checkoutList = [];
-
-for (var i = 0; i < buttons.length; i++) {
-    var button = buttons[i];
-    console.log(button.id);
-    button.addEventListener("click", function(e) {
-        checkoutList.push(e.target.id);
-        console.log(e.target.id);
-        setCookie("People", JSON.stringify(checkoutList), 2);
-    });
-}
-
-document.getElementById("packages").addEventListener("click", function(){
-  if (checkoutList.length > 0) {
-    window.location.href = "reformationPlan.html";
   }
-})
-
-
-fetch('dataset.json')
+  
+  fetch('dataset.json')
     .then((response) => response.json())
     .then((json) => {
       cardStack = document.getElementById("cardStack");
@@ -51,4 +32,24 @@ fetch('dataset.json')
           cardStack.innerHTML = cardStack.innerHTML + "<div class='col'><div class='card shadow-sm'><img src='" + json['Preds'][pred]["Photo Link"] + "'><div class='card-body'><p class='card-text'>Hi, my name is " + json['Preds'][pred]["Name"] + " and I'm " + json['Preds'][pred]["Age"] + ". I'm a pred from " + json['Preds'][pred]["Lives"] + " and I work as a " + json['Preds'][pred]["Profession"] + " at " + json['Preds'][pred]["Place of Work"] + ". " + json['Preds'][pred]["Index Hook"] + ".</p><div class='d-flex justify-content-between align-items-center'><div class='btn-group'><button type='button' class='btn btn-sm btn-outline-secondary' id='" + json['Preds'][pred]["Name"] + "'data-bs-toggle='modal' data-bs-target='#staticBackdrop'>Contact!</button></div></div></div></div></div>";
         }
       }
+});
+  
+  var buttons = document.getElementsByClassName("btn-outline-secondary");
+  var checkoutList = [];
+  
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+    console.log(button.id);
+    button.addEventListener("click", function(e) {
+        checkoutList.push(e.target.id);
+        console.log(e.target.id);
+        setCookie("People", JSON.stringify(checkoutList), 2);
     });
+  }
+  
+  document.getElementById("packages").addEventListener("click", function(){
+  if (checkoutList.length > 0) {
+    window.location.href = "reformationPlan.html";
+  }
+  })
+  
